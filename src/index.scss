@@ -1,0 +1,43 @@
+*{
+  margin:0;
+  padding:0;
+  border:none;
+  outline:none;
+}
+body{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+h1,h2,h3,h4{
+  font-family: 'Merriweather', serif;
+  text-align: center;
+}
+button{
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+.container{
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+}
+.item{
+  overflow: hidden;
+  padding: 10px 20px;
+  border: 1px solid black;
+}
+.wide{
+  grid-column: 1 / span 2;
+}
+.tall{
+  grid-column: 3 ;
+  grid-row: 1 / span 2;
+}
+@media screen and (max-width: 767px){
+  .container{
+    grid-template-columns: 100%;
+    display: block;
+  }
+}
